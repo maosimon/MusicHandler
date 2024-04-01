@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>員工打卡系統</title>
+    <!--<link rel="stylesheet" href="styles.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>員工打卡系統</h1>
+    <div id="register">
+        <h2>註冊員工</h2>
+        <input type="text" id="name" placeholder="姓名">
+        <input type="text" id="employee_id" placeholder="員工編號">
+        <button onclick="registerEmployee()">註冊</button>
+    </div>
+    <div id="clockin">
+        <h2>員工打卡</h2>
+        <input type="text" id="clockin_employee_id" placeholder="員工編號">
+        <button onclick="clockIn()">打卡</button>
+    </div>
+    <div id="query">
+        <h2>查詢紀錄</h2>
+        <button onclick="queryRecords()">查詢</button>
+        <ul id="record_list"></ul>
+    </div>
+    <!--<script src="script.js"></script>-->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
